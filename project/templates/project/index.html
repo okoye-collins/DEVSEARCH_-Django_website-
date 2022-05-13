@@ -34,7 +34,7 @@
                   <div class="dev__profile">
                     <img class="avatar avatar--md" src="{{ project.featured_image.url }}" alt="image" />
                     <div class="dev__meta">
-                      <h3><a href="{% url 'users:user_profile' project.owner.id %}" class="project__authour">{{ project.owner.name }}</a></h3>
+                      <h3><a href="{% url 'users:user_profile' project.id %}" class="project__authour">{{ project.owner.name }}</a></h3>
                       <h5>FullStack Web Designer & Developer</h5>
                     </div>
                   </div>
@@ -53,8 +53,8 @@
                   </div>
                 </a>
               </div>
-            </div>
           {% endfor %}
+        </div>
           
         </div>
       </div>

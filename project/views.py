@@ -17,7 +17,7 @@ def detail(request, pk):
     return render(request, 'project/detail.html', context) 
 
 
-def addproject(request, ):
+def addproject(request):
     form = AddProjectForm()
     if request.method == 'POST':
         # print(request.POST)
