@@ -1,4 +1,3 @@
-import profile
 from django.db.models.signals import post_delete, post_save
 from django.dispatch import receiver
 from .models import Profile
@@ -7,7 +6,7 @@ from django.contrib.auth.models import User
 
 @receiver(post_save, sender=User)
 def createProfile(sender, instance, created, **kwargs):
-    # print('======')
+    # print('======', created)
     if created:
         user = instance
         profile = Profile.objects.create(
